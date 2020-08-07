@@ -1,10 +1,12 @@
 /*Обнуление*/
-*{
+* {
 	padding: 0;
 	margin: 0;
 	border: 0;
 }
-*,*:before,*:after{
+*,
+*:before,
+*:after {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -12,9 +14,15 @@
 /* :focus,:active{outline: none;}
 a:focus,a:active{outline: none;} */
 
-nav,footer,header,aside{display: block;}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
 
-html,body{
+html,
+body {
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
@@ -24,43 +32,159 @@ html,body{
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
-input,button,textarea{font-family:inherit;}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
 
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
 
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400; margin: 0;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
 /*--------------------*/
+:root {
+	--color__site: #ff9900;
+}
 
+/*! Font */
+
+@font-face {
+	font-family: "montserrat";
+	src: url("../fonts/montserrat-bold-webfont.woff2") format("woff2"),
+		url("../fonts/montserrat-bold-webfont.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "montserrat";
+	src: url("../fonts/montserrat-extrabold-webfont.woff2") format("woff2"),
+		url("../fonts/montserrat-extrabold-webfont.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "montserrat";
+	src: url("../fonts/montserrat-regular-webfont.woff2") format("woff2"),
+		url("../fonts/montserrat-regular-webfont.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	font-family: montserrat, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #333;
+}
 /* <Container> */
 .container {
-  max-width: 1920px;
-  min-width: 320px;
-  padding: 0 75px;
-  margin: 0 auto;
-  background-color: rgb(218, 218, 248);
+	max-width: 1920px;
+	min-width: 320px;
+	padding: 0 75px;
+	margin: 0 auto;
 }
 
 /* </Container> */
 
 /* <Header> */
-.header{
-  display: flex;
-  align-items: center;
-  margin-bottom: 1px;
-   
+.header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1px;
 }
-.header__logo{
 
-margin: 14px auto 14px 0;
+.header__logo {
+	margin: 14px auto 14px 0;
 }
-.nav__list{
-  display: flex;
- 
+
+.nav__list {
+	display: flex;
+}
+
+.nav__link {
+	margin: 10px 30px;
+}
+
+.nav__link a {
+	display: block;
+	padding: 10px 5px;
+	color: rgb(0, 0, 0);
+	font-size: 18px;
+	border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+.nav__link a:hover {
+	border-bottom: 2px solid var(--color__site);
+}
+.nav__link:last-child {
+	margin-right: 0;
+	padding-right: 0;
 }
 /* </Header> */
+/* <Section__project> */
+.section__project {
+}
+.project {
+	height: 620px;
+	background-image: url(../img/balconies.jpg);
+}
+.project__contain {
+	max-width: 840px;
+	padding-top: 103px;
+	margin-left: 78px;
+}
+.project__title {
+	margin-bottom: 32px;
+	font-size: 70px;
+	font-weight: 800;
+	color: #fff;
+}
+.project__sub-title {
+	color: #fff;
+	font-size: 23px;
+	font-weight: 700;
+	margin-bottom: 100px;
+}
+.project__btn {
+	/* width: 280px;
+height: 80px; */
+	color: #fff;
+	font-weight: 700;
+	font-size: 23px;
+	padding: 25px 37px;
+	background-color: var(--color__site);
+}
+.project__btn:hover {
+	background-color: rgba(255, 153, 0, 0.6);
+}
+/* </Section__project> */
