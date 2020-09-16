@@ -243,7 +243,7 @@ height: 80px; */
 
 .about__item {
 	/* flex-basis: content; */
-	flex-grow:1;
+	flex-grow: 1;
 	width: 100%;
 	position: relative;
 	/* width: 100%;
@@ -254,7 +254,6 @@ height: 80px; */
 
 .about__img {
 	/* width: 100%; */
-
 }
 
 .about__text-inner {
@@ -290,13 +289,11 @@ height: 80px; */
 }
 
 .about__item-aside {
-	
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	justify-content: space-between;
-margin-left: 15px;
-
+	margin-left: 15px;
 }
 
 .item-aside__elem {
@@ -308,13 +305,10 @@ margin-left: 15px;
 	border: 1px solid #cacaca;
 	padding: 60px 0;
 	padding-left: 60px;
-	
-
 }
 
 .elem__img {
 	margin-right: 60px;
-
 }
 
 .elem__title {
@@ -325,92 +319,199 @@ margin-left: 15px;
 
 .elem__title h3 {
 	font-size: 24px;
-
 }
 
 .elem__title p {
 	font-size: 16px;
-
 }
 
 /* </Section__description-about> */
 /* *********************************************************************************** */
 /* <Section__work> */
-.work__list{
-	display:flex;
+.work__list {
+	display: flex;
 	margin-bottom: 40px;
 }
-.list__element{
+.list__element {
 	margin-right: 90px;
 }
 
-.list__link{
+.list__link {
 	font-size: 18px;
 	color: #333;
 }
-.list__link:hover{
+.list__link:hover {
 	color: var(--color__site);
 }
-.active{
-	color:var(--color__site);
+.active {
+	color: var(--color__site);
 }
 
-.work__wrapper{
+.work__wrapper {
 	display: flex;
 	justify-content: space-between;
 }
 
-.wrapper-text{
+.wrapper-text {
 	display: flex;
 	flex-direction: column;
 }
 
-.work__btn{
+.work__btn {
 	margin-top: auto;
 }
 
-.work__title{
+.work__title {
 	margin-bottom: 10px;
 	font-size: 24px;
 }
 
-.work__sub-title{
+.work__sub-title {
 	line-height: 2;
 	max-width: 760px;
 }
 
-.work__detailed{
+.work__detailed {
 	color: #fff;
 	font-weight: 700;
 	display: inline-block;
 	padding: 20px 38px;
 	background-color: var(--color__site);
 	margin-right: 30px;
-	
 }
 
-.work__contract{
+.work__contract {
 	display: inline-block;
-color: #333;
-padding: 20px 38px;
-border: 1px solid #333333;
+	color: #333;
+	padding: 20px 38px;
+	border: 1px solid #333333;
 }
 /* </Section__work> */
 /* *********************************************************************************** */
 /* <Section__questions> */
-.questions{
-
+.questions {
 }
 
-.questions__list{
+.questions__list {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.list__text {
+	display: inline-block;
+	/* float: left; */
+}
+
+.questions__list:first-child::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #cacaca;
+	margin-bottom: 40px;
+}
+
+.questions__list::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #cacaca;
+	margin: 40px 0;
+}
+
+.list__disclose {
+	background-color: #ececec;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: inline-block;
+float: right;
+	vertical-align: middle;
+	position: relative;
 	
 }
 
-.questions__list::before{
-	
+.list__disclose::before {
+	content: "";
+	display: block;
+	width: 31px;
+	height: 1px;
+	position: absolute;
+	background-color: black;
+	top: 24px;
+
+	left: 9.5px;
 }
 
-.questions__list::after{
-	
+.list__disclose::after {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 31px;
+	position: absolute;
+	background-color: black;
+	left: 24px;
+
+	top: 9.5px;
 }
 /* </Section__questions> */
+/* *********************************************************************************** */
+/* <Section__footer> */
+footer{
+	background-color: #222;
+	color: #cacaca;
+}
+
+.footer{
+	display:flex;
+	padding: 50px 0 80px;
+	justify-content: space-between;
+
+}
+
+.footer__opisanie{
+	max-width: 365px;
+	line-height: 2;
+
+}
+
+.footer__forma{
+	/* margin: 0 auto; */
+	/* width: 30%; */
+}
+
+.footer__forma-title{
+	margin: 0;
+}
+
+.form__reservation{
+	display: flex;
+	flex-direction: column;
+align-items: flex-start;
+	
+}
+
+.writing-form__input{
+margin-bottom: 25px;
+width: 100%;
+	max-width: 570px;
+	padding: 14px 24px;
+}
+
+.writing-form__input-mess{
+	max-width: 570px;
+	width: 100%;
+	margin-bottom: 30px;
+	padding: 14px 24px;
+}
+
+.writing-form__btn{
+	color: #fff;
+	font-weight: 700;
+	display: inline-block;
+	padding: 20px 38px;
+	background-color: var(--color__site);
+	margin-right: 30px;
+}
+/* </Section__footer> */
