@@ -11,14 +11,14 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-/* :focus,
+:focus,
 :active {
 	outline: none;
 }
 a:focus,
 a:active {
 	outline: none;
-} */
+}
 
 nav,
 footer,
@@ -26,14 +26,16 @@ header,
 aside {
 	display: block;
 }
-
+html {
+	/* background-color: #000; */
+}
 html,
 body {
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
 	line-height: 1;
-	font-size: 14px;
+	font-size: 10px;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -110,21 +112,22 @@ h6 {
 body {
 	font-family: montserrat, Arial, Helvetica, sans-serif;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 1.6rem;
 	color: #333;
 }
 
 h2 {
 	margin-top: 100px;
-	font-size: 48px;
+	font-size: 4.8rem;
 	font-weight: 400;
 	padding-bottom: 40px;
 }
 /* <Container> */
 .container {
-	max-width: 1920px;
-	min-width: 320px;
-	padding: 0 75px;
+	/* max-width: 1920px;
+	min-width: 320px; 
+	padding: 0 75px;*/
+	width: calc(100% - 150px);
 	margin: 0 auto;
 }
 
@@ -153,11 +156,12 @@ h2 {
 
 .nav__link a {
 	display: block;
-	padding: 10px 5px;
+	padding: 10px 5px 5px;
 	color: rgb(0, 0, 0);
-	font-size: 18px;
+	font-size: 1.8rem;
 	font-weight: 700;
 	border-bottom: 2px solid rgba(255, 255, 255, 0);
+	transition: border 500ms ease-out 0s;
 }
 
 .nav__link a:hover,
@@ -174,15 +178,16 @@ h2 {
 
 	border: none;
 	background-color: transparent;
+	/* transition: stroke 500ms ease-out 0s; */
 }
 
-.search-button svg:hover rect,
-.search-button svg:focus rect{
-	fill: blue;
+.search-button:hover rect,
+.search-button:focus rect {
+	fill: var(--color__site);
 }
-.search-button svg:hover circle,
-.search-button svg:focus circle{
-	stroke: blue;
+.search-button:hover circle,
+.search-button:focus circle {
+	stroke: var(--color__site);
 }
 
 .nav__link:last-child {
@@ -193,30 +198,34 @@ h2 {
 /* </Header> */
 /* *********************************************************************************** */
 /* <Section__project> */
-.section__project {
-}
+
 .project {
 	width: 100%;
-	min-height: 620px;
+	/* min-height: 620px; */
 	background-image: url(../img/balconies.jpg);
+	background-position: center;
 	background-repeat: no-repeat;
+	background-size: cover;
 }
+
 .project__contain {
-	max-width: 840px;
+	/* max-width: 840px; */
 	padding-top: 105px;
-	margin-left: 78px;
-	width: 100%;
+	padding-left: 78px;
+	width: 50%;
 }
+
 .project__title {
 	margin-bottom: 20px;
-	font-size: 70px;
+	font-size: 7rem;
 	font-weight: 800;
 	color: #fff;
 	line-height: 86px;
 }
+
 .project__sub-title {
 	color: #fff;
-	font-size: 23px;
+	font-size: 2.4rem;
 	font-weight: 700;
 	margin-bottom: 100px;
 	line-height: 29px;
@@ -226,11 +235,13 @@ h2 {
 height: 80px; */
 	color: #fff;
 	font-weight: 700;
-	font-size: 23px;
+	font-size: 2.4rem;
 	padding: 25px 37px;
+	margin-bottom: 90px;
 	background-color: var(--color__site);
+	transition: background 500ms ease-out 0s;
 }
-.project__btn:hover ,
+.project__btn:hover,
 .project__btn:focus {
 	background-color: rgba(255, 153, 0, 0.6);
 }
@@ -240,36 +251,35 @@ height: 80px; */
 .about__sub-title {
 	line-height: 2;
 	width: 70%;
-	padding-bottom: 44px;
+	margin-bottom: 45px;
 }
 
 .description-about__item {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	align-content: space-between;
-	flex-basis: 50%;
+	/* align-items: stretch; */
+
+	/* flex-basis: 50%; */
 }
 
 .about__item {
-	/* flex-basis: content; */
 	flex-grow: 1;
-	width: 100%;
+	/* width: 100%; */
 	position: relative;
-	/* width: 100%;
-	max-width: 870px;
-	min-width: 100px; */
+
 	margin-right: 15px;
 }
 
 .about__img {
-	/* width: 100%; */
+	width: 100%;
 }
 
 .about__text-inner {
 	position: absolute;
 	display: flex;
 	align-items: center;
-	/* justify-content: space-between; */
+
 	left: 0;
 	right: 0;
 	top: 70%;
@@ -296,27 +306,30 @@ height: 80px; */
 	margin-left: 75px;
 	font-weight: 700;
 	/* width: 100%; */
+	transition: background 500ms ease-out 0s;
 }
 
 .text-inner__link:hover,
-.text-inner__link:focus{
+.text-inner__link:focus {
 	background-color: var(--color__site);
 }
 
 .about__item-aside {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	/* width: 100%; */
 	justify-content: space-between;
-	margin-left: 15px;
+	/* margin-left: 15px; */
+	flex-grow: 1;
 }
 
 .item-aside__elem {
 	display: flex;
 	flex-wrap: nowrap;
 
-	align-items: stretch;
-
+	align-items: center;
+	/* width: 100%; */
+	height: 48%;
 	border: 1px solid #cacaca;
 	padding: 60px 0;
 	padding-left: 60px;
@@ -333,11 +346,11 @@ height: 80px; */
 }
 
 .elem__title h3 {
-	font-size: 24px;
+	font-size: 2.4rem;
 }
 
 .elem__title p {
-	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 /* </Section__description-about> */
@@ -345,15 +358,17 @@ height: 80px; */
 /* <Section__work> */
 .work__list {
 	display: flex;
-	margin-bottom: 40px;
+	margin-top: 15px;
+	margin-bottom: 50px;
 }
 .list__element {
 	margin-right: 90px;
 }
 
 .list__link {
-	font-size: 18px;
+	font-size: 1.8rem;
 	color: #333;
+	transition: color 500ms ease-out 0s;
 }
 .list__link:hover,
 .list__link:focus {
@@ -379,7 +394,7 @@ height: 80px; */
 
 .work__title {
 	margin-bottom: 10px;
-	font-size: 24px;
+	font-size: 2.4rem;
 }
 
 .work__sub-title {
@@ -394,10 +409,11 @@ height: 80px; */
 	padding: 20px 38px;
 	background-color: var(--color__site);
 	margin-right: 30px;
+	transition: background 500ms ease-out 0s;
 }
 
 .work__detailed:hover,
-.work__detailed:focus{
+.work__detailed:focus {
 	background-color: rgba(255, 153, 0, 0.6);
 }
 
@@ -406,28 +422,27 @@ height: 80px; */
 	color: #333;
 	padding: 20px 38px;
 	border: 1px solid #333333;
+	transition: background 500ms ease-out 0s;
 }
 
 .work__contract:hover,
-.work__contract:focus{
+.work__contract:focus {
 	background-color: #333;
 	color: #fff;
 }
 /* </Section__work> */
 /* *********************************************************************************** */
 /* <Section__questions> */
-.questions {
-}
 
 .questions__list {
-	font-size: 24px;
+	font-size: 2.4rem;
 	font-weight: 700;
 }
 
 .list__text {
 	display: flex;
 	justify-content: space-between;
-	align-items:center;
+	align-items: center;
 }
 
 .questions__list:first-child::before {
@@ -448,11 +463,12 @@ height: 80px; */
 	margin: 40px 0;
 }
 
-.questions_link{
+.questions_link {
 	color: #333;
+	transition: color 500ms ease-out 0s;
 }
 .questions_link:hover,
-.questions_link:focus{
+.questions_link:focus {
 	color: var(--color__site);
 }
 
@@ -461,15 +477,16 @@ height: 80px; */
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-display: inline-block;
+	display: inline-block;
 	vertical-align: middle;
 	position: relative;
+	transition: background 500ms ease-out 0s;
 }
 
 .list__disclose:hover,
-.list__disclose:focus{
-background-color: #d2d2d2;
-cursor: pointer;
+.list__disclose:focus {
+	background-color: #d2d2d2;
+	cursor: pointer;
 }
 
 .list__disclose::before {
@@ -522,7 +539,7 @@ footer {
 .footer__opisanie {
 	max-width: 365px;
 	line-height: 2;
-	padding-bottom: 100px;
+	padding-bottom: 10px;
 }
 .social {
 	display: flex;
@@ -531,23 +548,12 @@ footer {
 	margin-right: 20px;
 }
 .social__link {
-	display: block;
-	background-repeat: no-repeat;
-	width: 60px;
-	height: 60px;
-	background-position: center;
+	width: 61px;
+	height: 61px;
 }
-
-.fb {
-	background-image: url(../img/fb.svg);
-}
-
-.vk {
-	background-image: url(../img/vk.svg);
-}
-
-.inst {
-	background-image: url(../img/instagram.svg);
+.social__link:hover path,
+.social__link:focus path {
+	fill: var(--color__site);
 }
 
 .footer__forma {
@@ -573,6 +579,8 @@ footer {
 
 	padding: 14px 24px;
 	background: #414141;
+	transition: box-shadow 500ms ease-out 0s;
+	border-radius: 5px;
 }
 
 .writing-form__input-mess {
@@ -580,16 +588,34 @@ footer {
 	margin-bottom: 30px;
 	padding: 14px 24px;
 	background: #414141;
+	transition: box-shadow 500ms ease-out 0s;
+	border-radius: 5px;
 }
 
 .writing-form__btn {
-	color: #cacaca;
+	color: #fff;
 	font-weight: 700;
 	display: inline-block;
 	padding: 20px 38px;
 	background-color: var(--color__site);
 	margin-right: 30px;
 	padding-top: auto;
+	transition: background 500ms ease-out 0s;
+}
+
+.writing-form__input:hover,
+.writing-form__input:focus {
+	box-shadow: 0 0 10px 4px rgba(255, 153, 0, 0.6);
+}
+
+.writing-form__input-mess:hover,
+.writing-form__input-mess:focus {
+	box-shadow: 0 0 10px 4px rgba(255, 153, 0, 0.6);
+}
+
+.writing-form__btn:hover,
+.writing-form__btn:focus {
+	background-color: rgba(255, 153, 0, 0.6);
 }
 
 .site-map {
@@ -599,10 +625,16 @@ footer {
 .site-map__link {
 	color: #cacaca;
 	font-weight: 700;
-	font-size: 18px;
+	font-size: 1.8rem;
+	transition: color 500ms ease-out 0s;
 }
 
 .site-map__list {
 	margin-bottom: 22px;
+}
+
+.site-map__link:hover,
+.site-map__link:focus {
+	color: var(--color__site);
 }
 /* </Section__footer> */
