@@ -66,21 +66,21 @@
           </div>
         </div>
         <div class="about__item-aside">
-          <div class="item-aside__elem">
-            <img class="elem__img" src="img/cube.svg"></img>
+          <div class="item-aside__elem img__about-up">
+
             <div class="elem__title">
               <h3>Консультация с широким активом</h3>
               <p>А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для как самодостаточных,
-                так
+                 так 
                 и внешне зависимых концептуальных решений.</p>
             </div>
           </div>
-          <div class="item-aside__elem">
-            <img class="elem__img" src="img/gear.svg"></img>
+          <div class="item-aside__elem img__about-down">
+
             <div class="elem__title">
               <h3>В своём стремлении повысить</h3>
               <p>Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный
-                эксперимент проверки прогресса профессионального сообщества.</p>
+                 эксперимент проверки прогресса профессионального сообщества.</p> 
             </div>
           </div>
         </div>
@@ -115,52 +115,95 @@
             <a class="work__contract" href="#">Договор</a>
           </div>
         </div>
-        <img src="img/work1.jpg" alt="">
+        <div class="work__img">
+          <img src="img/work1.jpg" alt="">
+        </div>
       </div>
     </section>
     <section class="container section__questions">
       <h2>Часто задаваемые вопросы</h2>
-      <ul class="questions">
+      <ul class="questions accordion">
 
-        <li class="questions__list">
+
+
+        <!-- 
+        <li class="content__box">
+
+          <div class=" label" href="#">Из чего формируется конечная стоимость проекта?</div>
+          
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, eius soluta similique autem architecto
+              dolore expedita ipsum magni cumque nemo reprehenderit sit asperiores. Et ea recusandae accusamus neque,
+              ut repellendus!</p>
+
+          </div>
+        </li>
+ -->
+
+
+
+
+
+        <li class="questions__list content__box">
           <div class="list__text">
-            <a class="questions_link" href="#">Из чего формируется конечная стоимость проекта?</a>
-            <div class="list__disclose" tabindex="0">
-            </div>
+            <div class="questions__link label" href="#">Из чего формируется конечная стоимость проекта?</div>
+          </div>
+          <div class="list__content content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, eius soluta similique autem architecto
+              dolore expedita ipsum magni cumque nemo reprehenderit sit asperiores. Et ea recusandae accusamus neque,
+              ut repellendus!</p>
+
           </div>
         </li>
 
-        <li class="questions__list">
+        <li class="questions__list content__box">
           <div class="list__text">
-            <a class="questions_link" href="#">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</a>
-            <div class="list__disclose" tabindex="0">
-            </div>
+            <div class="questions__link label" href="#">У меня есть свой проект. Сможем ли мы его доработать /
+              реализовать?</div>
+          </div>
+          <div class="list__content content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, eius soluta similique autem architecto
+              dolore expedita ipsum magni cumque nemo reprehenderit sit asperiores. Et ea recusandae accusamus neque,
+              ut repellendus!</p>
+
           </div>
         </li>
 
-        <li class="questions__list">
+        <li class="questions__list content__box">
           <div class="list__text">
-            <a class="questions_link" href="#">Я выбираю между разными компаниями. В чём ваше отличие?</a>
-            <div class="list__disclose" tabindex="0">
-            </div>
+            <div class="questions__link label" href="#">Я выбираю между разными компаниями. В чём ваше отличие?</div>
+          </div>
+          <div class="list__content content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, eius soluta similique autem architecto
+              dolore expedita ipsum magni cumque nemo reprehenderit sit asperiores. Et ea recusandae accusamus neque,
+              ut repellendus!</p>
+
           </div>
         </li>
 
-        <li class="questions__list">
+        <li class="questions__list content__box">
           <div class="list__text">
-            <a class="questions_link" href="#">Могу ли я делегировать вам работу / согласование с подрядчиком /
+            <div class="questions__link label" href="#">Могу ли я делегировать вам работу / согласование с подрядчиком /
               организацией?
-            </a>
-            <div class="list__disclose" tabindex="0">
             </div>
+          </div>
+          <div class="list__content content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, eius soluta similique autem architecto
+              dolore expedita ipsum magni cumque nemo reprehenderit sit asperiores. Et ea recusandae accusamus neque,
+              ut repellendus!</p>
+
           </div>
         </li>
 
-        <li class="questions__list">
+        <li class="questions__list content__box">
           <div class="list__text">
-            <a class="questions_link" href="#">Могу ли я вернуть деньги на каком-либо из этапов работ?</a>
-            <div class="list__disclose" tabindex="0">
-            </div>
+            <div class="questions__link label" href="#">Могу ли я вернуть деньги на каком-либо из этапов работ?</div>
+          </div>
+          <div class="list__content content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, eius soluta similique autem architecto
+              dolore expedita ipsum magni cumque nemo reprehenderit sit asperiores. Et ea recusandae accusamus neque,
+              ut repellendus!</p>
+
           </div>
         </li>
       </ul>
@@ -228,6 +271,15 @@
 
     </div>
   </footer>
+  <script>
+    const accordion = document.getElementsByClassName('content__box');
+
+    for (i = 0; i < accordion.length; i++) {
+      accordion[i].addEventListener('click', function () {
+        this.classList.toggle('active')
+      })
+    }
+  </script>
 </body>
 
 </html>
