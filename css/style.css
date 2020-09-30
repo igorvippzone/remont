@@ -117,20 +117,26 @@ body {
 }
 
 h2 {
-	margin-top: 100px;
+	margin-top: 110px;
 	font-size: 4.8rem;
 	font-weight: 400;
-	padding-bottom: 40px;
+	padding-bottom: 28px;
 }
 /* <Container> */
 .container {
-	/* max-width: 1920px;
-	min-width: 320px; 
-	padding: 0 75px;*/
 	width: calc(100% - 150px);
 	margin: 0 auto;
 }
-
+.visualli__hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
 /* </Container> */
 /* *********************************************************************************** */
 /* <Header> */
@@ -145,8 +151,10 @@ h2 {
 .header__logo {
 	margin: 14px 0 14px 0;
 }
-.header__nav{
-	width: 70%;
+.header__nav {
+	display: flex;
+	align-items: center;
+	width: 45%;
 }
 
 .nav__list {
@@ -159,7 +167,27 @@ h2 {
 .nav__link {
 	margin: 10px 0px;
 }
-
+.burger {
+	display: none;
+}
+.burger svg rect {
+	transition: all 1s;
+}
+.burger:hover {
+	cursor: pointer;
+}
+.burger svg:hover rect,
+.burger:focus rect {
+	fill: var(--color__site);
+}
+.burger:hover .qwe,
+.burger:focus .qwe {
+	x: -5px;
+}
+.burger:hover .qwer,
+.burger:focus .qwer {
+	x: -12px;
+}
 .nav__link a {
 	display: block;
 	padding: 10px 5px 5px;
@@ -184,7 +212,14 @@ h2 {
 
 	border: none;
 	background-color: transparent;
-	/* transition: stroke 500ms ease-out 0s; */
+
+	transition: all 1s;
+	margin-left: 70px;
+}
+
+.search-button rect,
+.search-button circle {
+	transition: all 1s;
 }
 
 .search-button:hover rect,
@@ -207,7 +242,6 @@ h2 {
 
 .project {
 	width: 100%;
-	/* min-height: 620px; */
 	background-image: url(../img/balconies.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -215,10 +249,9 @@ h2 {
 }
 
 .project__contain {
-	/* max-width: 840px; */
 	padding-top: 105px;
 	padding-left: 78px;
-	width: 50%;
+	width: 55%;
 }
 
 .project__title {
@@ -233,12 +266,17 @@ h2 {
 	color: #fff;
 	font-size: 2.4rem;
 	font-weight: 700;
-	margin-bottom: 100px;
+	margin-bottom: 98px;
 	line-height: 29px;
 }
+
+.about__info {
+	vertical-align: middle;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
 .project__btn {
-	/* width: 280px;
-height: 80px; */
 	color: #fff;
 	font-weight: 700;
 	font-size: 2.4rem;
@@ -257,42 +295,33 @@ height: 80px; */
 .about__sub-title {
 	line-height: 2;
 	width: 70%;
-	margin-bottom: 45px;
+	margin-bottom: 40px;
 }
 
 .description-about__item {
 	display: flex;
-flex-flow: row wrap;
-justify-content: space-between;
-	/* align-content: space-between; */
-	/* align-items: stretch; */
-width: 100%;
-	/* flex-basis: 50%; */
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+	width: 100%;
 }
 
 .about__item {
-	/* height: 100%; */
-	width: 48%;
-	position: relative;
-}
+	width: 49%;
 
-.about__img {
-width: 100%;
+	background-image: url(../img/about.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: flex-end;
 }
 
 .about__text-inner {
-	position: absolute;
 	display: flex;
 	align-items: center;
+	height: 28%;
 
-	left: 0;
-	right: 0;
-	top: 70%;
-	bottom: 0;
-	/* width: 100%; */
-
-	background-color: rgba(0, 0, 0, 0.2);
-	backdrop-filter: blur(15px);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .text-inner__title {
@@ -306,11 +335,9 @@ width: 100%;
 .text-inner__link {
 	color: #fff;
 	border: 3px solid var(--color__site);
-	padding: 20px 40px;
-	margin-right: 70px;
-	margin-left: 75px;
-	font-weight: 700;
-	/* width: 100%; */
+	padding: 20px 40px 20px 30px;
+	margin-right: 65px;
+
 	transition: background 500ms ease-out 0s;
 }
 
@@ -320,14 +347,12 @@ width: 100%;
 }
 
 .about__item-aside {
-
 	display: flex;
 	flex-direction: column;
-	/* width: 100%; */
+
 	justify-content: space-between;
-	width: 48%;
-	/* margin-left: 15px; */
-	/* flex-grow: 1; */
+
+	width: 49%;
 }
 
 .item-aside__elem {
@@ -335,29 +360,28 @@ width: 100%;
 	flex-wrap: nowrap;
 
 	align-items: center;
-	/* width: 100%; */
+
 	height: 48%;
 	border: 1px solid #cacaca;
-	/* padding: 60px 0;
-	padding-left: 60px; */
+
 	background-repeat: no-repeat;
 	background-position: 60px center;
 
 	padding-left: 300px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .elem__img {
 	margin-right: 60px;
 }
 
-.img__about-up{
+.img__about-up {
 	background-image: url(../img/cube.svg);
-	
 }
 
-.img__about-down{
+.img__about-down {
 	background-image: url(../img/gear.svg);
-
 }
 
 .elem__title {
@@ -368,12 +392,11 @@ width: 100%;
 
 .elem__title h3 {
 	font-size: 2.4rem;
-	/* font-size: 1.9vw; */
 }
 
 .elem__title p {
 	font-size: 1.6rem;
-	/* font-size: 0.8vw; */
+
 	max-width: 450px;
 }
 
@@ -382,7 +405,7 @@ width: 100%;
 /* <Section__work> */
 .work__list {
 	display: flex;
-	margin-top: 15px;
+	margin-top: 25px;
 	margin-bottom: 50px;
 }
 .list__element {
@@ -411,7 +434,7 @@ width: 100%;
 .wrapper-text {
 	display: flex;
 	flex-direction: column;
-	width: 48%;
+	width: 44%;
 }
 
 .work__btn {
@@ -419,23 +442,27 @@ width: 100%;
 }
 
 .work__title {
+	padding: 0;
 	margin-bottom: 10px;
 	font-size: 2.4rem;
 }
 
-.work__img{
-	width: 48%;
-	
+.work__img {
+	width: 49%;
 }
-.work__img img{
+.work__img img {
 	width: 100%;
-	/* height: 100%; */
+	height: 100%;
+}
+
+.img__max1024 {
+	display: none;
 }
 
 .work__sub-title {
 	line-height: 2;
-	/* font-size: 1vw; */
 
+	margin-bottom: 60px;
 }
 
 .work__detailed {
@@ -469,7 +496,9 @@ width: 100%;
 /* </Section__work> */
 /* *********************************************************************************** */
 /* <Section__questions> */
-
+.questions__title {
+	padding-bottom: 40px;
+}
 .questions__list {
 	font-size: 2.4rem;
 	font-weight: 700;
@@ -487,7 +516,7 @@ width: 100%;
 	width: 100%;
 	height: 1px;
 	background-color: #cacaca;
-	margin-bottom: 40px;
+	margin-bottom: 45px;
 }
 
 .questions__list::after {
@@ -496,7 +525,8 @@ width: 100%;
 	width: 100%;
 	height: 1px;
 	background-color: #cacaca;
-	margin: 40px 0;
+	margin-top: 45px;
+	margin-bottom: 45px;
 }
 
 .questions__link {
@@ -505,57 +535,54 @@ width: 100%;
 	position: relative;
 	color: #333;
 	transition: color 500ms ease-out 0s;
+	padding-right: 50px;
+}
+.questions__link-slash {
+	color: #cacaca;
 }
 .questions__link:hover,
 .questions__link:focus {
 	color: var(--color__site);
 }
-.accordion{
+.accordion {
 	width: 100%;
 }
-.accordion .content__box{
+.accordion .content__box {
 	position: relative;
-	
-
 }
 
-.accordion .content__box .label{
+.accordion .content__box .label {
 	position: relative;
 
 	cursor: pointer;
-
 }
 
-.accordion .content__box .label::before{
+.accordion .content__box .label::before {
 	content: "";
 	display: block;
 	width: 50px;
 	height: 50px;
 	background: url(../img/add.svg) no-repeat center center, #ececec;
 	background-size: 31px;
-	
-border-radius: 50%;
+
+	border-radius: 50%;
 	position: absolute;
 	top: 50%;
-	right: 20px;
+	right: 0;
 	transform: translateY(-50%);
-	
-
 }
 
-
-.accordion .content__box.active .label::before{
+.accordion .content__box.active .label::before {
 	content: "";
 	background: url(../img/minus.svg) no-repeat center center, #ececec;
 	background-size: 31px;
 }
-.accordion .content__box .label::before:hover,
-.accordion .content__box .label::before:focus{
+.accordion .content__box .label:hover::before {
 	content: "";
-	border: 3px solid violet;
-	background-color: rgb(0, 0, 0);
+
+	background-color: #d2d2d2;
 }
-.accordion .content__box .content{
+.accordion .content__box .content {
 	position: relative;
 	color: #333;
 	height: 0;
@@ -564,58 +591,19 @@ border-radius: 50%;
 	overflow-y: auto;
 }
 
-.accordion .content__box.active .label{
-color: var(--color__site);
-	
+.accordion .content__box.active .label {
+	color: var(--color__site);
 }
 
-.accordion .content__box.active .content{
-	
-	height: 150px;
-	padding: 10px;
-	
-}
-/* 
-.list__disclose {
-	background-color: #ececec;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	display: inline-block;
-	vertical-align: middle;
-	position: relative;
-	transition: background 500ms ease-out 0s;
-}
-
-.list__disclose:hover,
-.list__disclose:focus {
+.accordion .content__box.active .label::before {
 	background-color: #d2d2d2;
-	cursor: pointer;
-} 
-
-.list__disclose::before {
-	content: "";
-	display: block;
-	width: 31px;
-	height: 1px;
-	position: absolute;
-	background-color: black;
-	top: 24px;
-
-	left: 9.5px;
 }
 
-.list__disclose::after {
-	content: "";
-	display: block;
-	width: 1px;
-	height: 31px;
-	position: absolute;
-	background-color: black;
-	left: 24px;
+.accordion .content__box.active .content {
+	height: 100%;
+	padding: 20px 60px 10px 0px;
+}
 
-	top: 9.5px;
-}*/
 /* </Section__questions> */
 /* *********************************************************************************** */
 /* <Section__footer> */
@@ -627,29 +615,40 @@ footer {
 
 .footer {
 	display: flex;
+	flex-flow: row nowrap;
 	padding-top: 50px;
 	padding-bottom: 80px;
 	justify-content: space-between;
-	/* align-items: center; */
 }
 
-.opisanie {
+.map {
+	width: 33%;
+
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
 }
+.map img {
+	margin-bottom: 20px;
+}
+.opisanie {
+	width: 33%;
+	padding-left: 200px;
+	align-self: center;
+}
 
 .footer__opisanie {
-	max-width: 365px;
+	/* max-width: 365px; */
 	line-height: 2;
+	padding-left: 20px;
 	padding-bottom: 10px;
 }
 .social {
 	display: flex;
 }
 .social__list {
-	margin-right: 20px;
+	margin-right: 25px;
 }
 .social__link {
 	width: 61px;
@@ -661,14 +660,12 @@ footer {
 }
 
 .footer__forma {
-	/* margin: 0 auto; */
-	/* width: 30%; */
-	width: 100%;
-	max-width: 570px;
+	width: 33%;
 }
 
 .footer__forma-title {
 	margin: 0;
+	margin-top: 15px;
 }
 
 .form__reservation {
@@ -681,7 +678,7 @@ footer {
 	margin-bottom: 25px;
 	width: 100%;
 
-	padding: 14px 24px;
+	padding: 20px 24px;
 	background: #414141;
 	transition: box-shadow 500ms ease-out 0s;
 	border-radius: 5px;
@@ -689,8 +686,8 @@ footer {
 
 .writing-form__input-mess {
 	width: 100%;
-	margin-bottom: 30px;
-	padding: 14px 24px;
+	margin-bottom: 50px;
+	padding: 15px 24px;
 	background: #414141;
 	transition: box-shadow 500ms ease-out 0s;
 	border-radius: 5px;
@@ -700,9 +697,9 @@ footer {
 	color: #fff;
 	font-weight: 700;
 	display: inline-block;
-	padding: 20px 38px;
+	padding: 20px 40px;
 	background-color: var(--color__site);
-	margin-right: 30px;
+	margin-right: 25px;
 	padding-top: auto;
 	transition: background 500ms ease-out 0s;
 }
@@ -723,7 +720,7 @@ footer {
 }
 
 .site-map {
-	align-self: center;
+	margin-bottom: 90px;
 }
 
 .site-map__link {
@@ -734,54 +731,262 @@ footer {
 }
 
 .site-map__list {
-	margin-bottom: 22px;
+	margin-bottom: 18px;
 }
 
 .site-map__link:hover,
 .site-map__link:focus {
 	color: var(--color__site);
 }
+
+.writing-form__input-check {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.writing-form__input-check + label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+}
+
+.writing-form__input-check + label::before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	margin-right: 3px;
+	border: 1px solid #cacaca;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.writing-form__input-check:checked + label::before {
+	background-image: url(../img/check.svg);
+}
 /* </Section__footer> */
 
-@media (max-width: 1024px) {
-	.container {
-		width: calc(100% - 100px);
-	
+/* <Container> */
+/* </Container> */
+/* *********************************************************************************** */
+/* <Header> */
+/* </Header> */
+/* *********************************************************************************** */
+/* <Section__project> */
+/* </Section__project> */
+/* *********************************************************************************** */
+/* <Section__description-about> */
+/* </Section__description-about> */
+/* *********************************************************************************** */
+/* <Section__work> */
+/* </Section__work> */
+/* *********************************************************************************** */
+/* <Section__questions> */
+/* </Section__questions> */
+/* *********************************************************************************** */
+/* <Section__footer> */
+/* </Section__footer> */
+@media (max-width: 1550px) {
+	/* <Section__project> */
+	.project__contain {
+		width: 70%;
+	}
+	/* </Section__project> */
+	/* *********************************************************************************** */
+	/* <Section__footer> */
+	.opisanie {
+		padding-left: 20px;
+	}
+	/* </Section__footer> */
+}
+@media (max-width: 1400px) {
+	/* <Section__description-about> */
+	.description-about__item {
+		flex-flow: column wrap;
+		width: 100%;
+	}
+	.about__text-inner {
+		height: 170px;
+	}
+	.about__item {
+		min-height: 650px;
+
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.about__item-aside {
+		width: 100%;
+	}
+	.item-aside__elem {
+		margin-bottom: 20px;
 	}
 
-.nav__link a{
-font-size: 1.6rem;
+	/* </Section__description-about> */
+	/* *********************************************************************************** */
+	/* <Section__work> */
+	.img__max {
+		display: none;
+	}
+	.img__max1024 {
+		display: block;
+	}
+	/* </Section__work> */
+}
+@media (max-width: 1024px) {
+	/* <Container> */
+
+	.container {
+		width: calc(100% - 100px);
+	}
+
+	/* </Container> */
+	/* *********************************************************************************** */
+	/* <Header> */
+	.header {
+		display: flex;
+		justify-content: space-between;
+	}
+	.header__nav {
+		width: 26px;
+	}
+
+	.nav__list {
+		display: none;
+	}
+
+	.nav__link a {
+		font-size: 1.6rem;
+	}
+
+	.burger {
+		display: block;
+	}
+	.search-button {
+		margin: 0;
+	}
+	/* </Header> */
+	/* *********************************************************************************** */
+	/* <Section__project> */
+
+	.project__title {
+		font-size: 6rem;
+		line-height: 73px;
+	}
+
+	.project__sub-title {
+		font-size: 2rem;
+		line-height: 24px;
+	}
+
+	.project__contain {
+		padding-top: 160px;
+		padding-left: 45px;
+		width: 90%;
+	}
+	/* </Section__project> */
+	/* *********************************************************************************** */
+	/* <Section__description-about> */
+
+	.about__sub-title {
+		width: 100%;
+	}
+
+	.about__item {
+		/* width: 100%; */
+	}
+
+	.about__item-aside {
+		width: 100%;
+	}
+
+	/* </Section__description-about> */
+	/* *********************************************************************************** */
+	/* <Section__questions> */
+
+	/* </Section__questions> */
+
+	/* *********************************************************************************** */
+	/* <Section__footer> */
+	.opisanie {
+		display: none;
+	}
+	.footer__forma {
+		width: 77%;
+		padding-left: 100px;
+	}
+	/* </Section__footer> */
 }
 
-.project__title {
-	font-size: 6rem;
-	
-}
+@media (max-width: 768px) {
+	/* <Container> */
+	/* </Container> */
+	/* *********************************************************************************** */
+	/* <Header> */
 
-.project__sub-title {
-	font-size: 2rem;
-}
+	.header {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1px;
+	}
 
-.project__contain {
-	/* max-width: 840px; */
-	padding-top: 105px;
-	padding-left: 78px;
-	width: 90%;
-}
+	.header__logo {
+		margin: 10px 0;
+		width: 150px;
+	}
 
+	/* </Header> */
+	/* *********************************************************************************** */
+	/* <Section__project> */
+	.project__contain {
+		padding: 0px;
+		padding-top: 190px;
+		padding-left: 50px;
+		width: 100%;
+		height: 768px;
+	}
+	.section__project {
+		width: 100%;
+	}
 
-.about__sub-title{
-	width: 100%;
-}
+	.project__sub-title {
+		margin-bottom: 110px;
+	}
 
-.about__item {
-	width: 100%;
-	margin-bottom: 20px;
-
-}
-
-.about__item-aside {
-	width: 100%;
-}
-
+	.project__btn {
+		margin-bottom: 115px;
+	}
+	/* </Section__project> */
+	/* *********************************************************************************** */
+	/* <Section__description-about> */
+	.about__item {
+		height: 100%;
+		height: 650px;
+	}
+	/* </Section__description-about> */
+	/* *********************************************************************************** */
+	/* <Section__work> */
+	/* </Section__work> */
+	/* *********************************************************************************** */
+	/* <Section__questions> */
+	/* </Section__questions> */
+	/* *********************************************************************************** */
+	/* <Section__footer> */
+	.footer {
+		flex-wrap: wrap;
+	}
+	.map {
+		order: 1;
+	}
+	.site-map {
+		display: none;
+	}
+	.footer__forma {
+		margin-left: 0px;
+		margin-bottom: 60px;
+	}
+	/* </Section__footer> */
 }
