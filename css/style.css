@@ -639,7 +639,6 @@ footer {
 }
 
 .footer__opisanie {
-	/* max-width: 365px; */
 	line-height: 2;
 	padding-left: 20px;
 	padding-bottom: 10px;
@@ -969,6 +968,29 @@ footer {
 	/* </Section__description-about> */
 	/* *********************************************************************************** */
 	/* <Section__work> */
+	.work__list {
+		justify-content: space-between;
+	}
+	.list__element {
+		margin-right: 0;
+	}
+	.work__wrapper {
+		flex-direction: column;
+	}
+	.wrapper-text {
+		order: 1;
+		width: 100%;
+	}
+	.work__img {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.img__max {
+		display: block;
+	}
+	.img__max1024 {
+		display: none;
+	}
 	/* </Section__work> */
 	/* *********************************************************************************** */
 	/* <Section__questions> */
@@ -985,6 +1007,8 @@ footer {
 		display: none;
 	}
 	.footer__forma {
+		width: 100%;
+		padding-left: 0;
 		margin-left: 0px;
 		margin-bottom: 60px;
 	}
