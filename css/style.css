@@ -305,7 +305,9 @@ h2 {
 
 	width: 100%;
 }
-
+.about__img {
+	display: none;
+}
 .about__item {
 	width: 49%;
 
@@ -1012,5 +1014,91 @@ footer {
 		margin-left: 0px;
 		margin-bottom: 60px;
 	}
+	/* </Section__footer> */
+}
+@media (max-width: 674px) {
+	/* <Container> */
+	/* </Container> */
+	/* *********************************************************************************** */
+	/* <Header> */
+	/* </Header> */
+	/* *********************************************************************************** */
+	/* <Section__project> */
+	/* </Section__project> */
+	/* *********************************************************************************** */
+	/* <Section__description-about> */
+	.about__img {
+		display: block;
+		width: 100%;
+	}
+	.about__text-inner {
+		/* height: 0px; */
+		width: 100%;
+	}
+
+	.about__item {
+		flex-direction: column;
+		/* min-height: 200px; */
+		background-image: none;
+		margin-bottom: 0px;
+		/* background-size: contain; */
+	}
+
+	.about__text-inner {
+		margin-top: 10px;
+		flex-direction: column;
+		align-items: flex-start;
+		color: #333;
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	.text-inner__title {
+		color: #333;
+		margin-left: 0px;
+		padding-right: 0px;
+		line-height: 2;
+		font-size: 1.4rem;
+		font-weight: 500;
+	}
+
+	.text-inner__link {
+		color: #333;
+		/*	border: 3px solid var(--color__site);
+		padding: 20px 40px 20px 30px;
+		margin-right: 65px;
+	
+		transition: background 500ms ease-out 0s; */
+	}
+	/* </Section__description-about> */
+	/* *********************************************************************************** */
+	/* <Section__work> */
+	/* </Section__work> */
+	/* *********************************************************************************** */
+	/* <Section__questions> */
+	/* </Section__questions> */
+	/* *********************************************************************************** */
+	/* <Section__footer> */
+	/* </Section__footer> */
+}
+@media (max-width: 320px) {
+	/* <Container> */
+	/* </Container> */
+	/* *********************************************************************************** */
+	/* <Header> */
+	/* </Header> */
+	/* *********************************************************************************** */
+	/* <Section__project> */
+	/* </Section__project> */
+	/* *********************************************************************************** */
+	/* <Section__description-about> */
+	/* </Section__description-about> */
+	/* *********************************************************************************** */
+	/* <Section__work> */
+	/* </Section__work> */
+	/* *********************************************************************************** */
+	/* <Section__questions> */
+	/* </Section__questions> */
+	/* *********************************************************************************** */
+	/* <Section__footer> */
 	/* </Section__footer> */
 }
