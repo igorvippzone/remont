@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>REMONT</title>
 </head>
 
@@ -42,15 +49,37 @@
   </header>
 
   <main>
+
+
     <section class="container section__project">
-      <div class="project">
-        <div class="project__contain">
-          <h1 class="project__title">Проектные решения любой сложности</h1>
-          <p class="project__sub-title">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день
-            остаются уделом проектантов</p>
-          <button class="project__btn">Заказать расчёт</button>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide slide-one">Slide 1</div>
+          <div class="swiper-slide slide-two">Slide 2 <br></div>
+          <div class="swiper-slide slide-three">Slide 3</div>
+  
         </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
+
+      <div class="project__contain">
+        <h1 class="project__title">Проектные решения любой сложности</h1>
+        <p class="project__sub-title">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день
+          остаются уделом проектантов</p>
+        <button class="project__btn">Заказать расчёт</button>
+      </div>
+
     </section>
     <section class="container section__description-about">
       <h2>О нас</h2>
@@ -130,8 +159,8 @@
             целом,
             однако конкретные выводы, разумеется, призваны к ответу.</p>
           <div class="work__btn">
-            <a class="work__detailed" href="#">Подробнее</a>
-            <a class="work__contract" href="#">Договор</a>
+            <a class="work__detailed " href="#">Подробнее</a>
+            <a class="work__contract " href="#">Договор</a>
           </div>
         </div>
         <div class="work__img">
@@ -292,7 +321,7 @@
 
           <textarea class="writing-form__input-mess" name="textarea" cols="30" rows="6" placeholder="Сообщение"
             required></textarea>
-          <div>
+          <div class="btn-sub">
             <button class="writing-form__btn" type="submit">Отправить данные</button><input
               class="writing-form__input-check" type="checkbox" id="Datenverarbeitung" checked>
 
@@ -313,14 +342,41 @@
     </div>
   </footer>
   <script>
-    const accordion = document.getElementsByClassName('content__box');
+
+    const accordion = document.querySelectorAll('.content__box');
 
     for (i = 0; i < accordion.length; i++) {
+      console.log("1")
       accordion[i].addEventListener('click', function () {
+        console.log("3")
         this.classList.toggle('active')
+        console.log("2")
       })
     }
   </script>
+<script>
+var mySwiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+})</script>
+
 </body>
 
 </html>

@@ -240,14 +240,39 @@ h2 {
 /* *********************************************************************************** */
 /* <Section__project> */
 
-.project {
+/* .project {
 	width: 100%;
 	background-image: url(../img/balconies.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+} */
 
+.swiper-container {
+width: 100%;
+height: 100%;
+max-height: 620px;
+}
+.slide-one{
+	width: 100%;
+	background-image: url(../img/bg-balconies.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.slide-two{
+	width: 100%;
+	background-image: url(../img/bg-apartment.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}.slide-three{
+	width: 100%;
+	background-image: url(../img/bg-brown.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 .project__contain {
 	padding-top: 105px;
 	padding-left: 78px;
@@ -564,7 +589,7 @@ h2 {
 	height: 50px;
 	background: url(../img/add.svg) no-repeat center center, #ececec;
 	background-size: 31px;
-
+	
 	border-radius: 50%;
 	position: absolute;
 	top: 50%;
@@ -585,9 +610,13 @@ h2 {
 .accordion .content__box .content {
 	position: relative;
 	color: #333;
-	height: 0;
-	overflow: hidden;
-	transition: 0.5s;
+	opacity: 0;
+	/* height: 0; */
+	display: none;
+	/* visibility: hidden; */
+	/* overflow: hidden; */
+	
+	transition: color 5s ease;
 	overflow-y: auto;
 }
 
@@ -600,7 +629,11 @@ h2 {
 }
 
 .accordion .content__box.active .content {
-	height: 100%;
+	/* height: 100%; */
+	display: block;
+	opacity: 1;
+	color: red;
+/* visibility: visible; */
 	padding: 20px 60px 10px 0px;
 }
 
@@ -702,6 +735,10 @@ footer {
 	padding-top: auto;
 	transition: background 500ms ease-out 0s;
 }
+.btn-sub{
+	display: flex;
+	align-items: center;
+}
 
 .writing-form__input:hover,
 .writing-form__input:focus {
@@ -765,6 +802,12 @@ footer {
 .writing-form__input-check:checked + label::before {
 	background-image: url(../img/check.svg);
 }
+
+.writing-form__input-check:focus + label::before,
+.writing-form__input-check:hover + label::before {
+	outline: rgb(59, 153, 252) auto 1px;
+}
+
 /* </Section__footer> */
 
 /* <Container> */
