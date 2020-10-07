@@ -114,6 +114,7 @@ body {
 	font-weight: 400;
 	font-size: 1.6rem;
 	color: #333;
+	background-color: #e5e5e5;
 }
 
 h2 {
@@ -140,12 +141,17 @@ h2 {
 /* </Container> */
 /* *********************************************************************************** */
 /* <Header> */
+header{
+	width: 100%;
+	background-color: #fff;
+}
 .header {
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 1px;
+	
 }
 
 .header__logo {
@@ -251,6 +257,9 @@ h2 {
 .swiper-container {
 width: 100%;
 height: 620px;
+/* min-height: 100%; */
+/* padding-bottom: 70%; */
+/* height: 70vh; */
 position: relative;
 }
 
@@ -281,9 +290,11 @@ z-index: 1111;
 .project__title {
 	margin-bottom: 20px;
 	font-size: 7rem;
+	/* font-size: 3.7vw; */
 	font-weight: 800;
 	color: #fff;
 	line-height: 86px;
+	/* line-height: 4.5vw; */
 }
 
 .project__sub-title {
@@ -829,8 +840,28 @@ footer {
 /* *********************************************************************************** */
 /* <Section__footer> */
 /* </Section__footer> */
+@media (min-width: 1920px) {
+
+}
+@media (max-width: 1628px) {
+	.project__title {
+	
+		/* font-size: 6.5rem; */
+		font-size: 3.7vw;
+	
+		/* line-height: 86px; */
+		line-height: 4.5vw;
+	}
+	
 @media (max-width: 1550px) {
-	/* <Section__project> */
+	/* <Container> */
+	.header__nav {
+
+		width: 65%;
+	}
+/* </Container> */
+/* *********************************************************************************** */
+/* <Section__project> */
 	.project__contain {
 		width: 70%;
 	}
@@ -910,7 +941,9 @@ footer {
 	/* </Header> */
 	/* *********************************************************************************** */
 	/* <Section__project> */
-
+.swiper-container{
+	/* height: 768px; */
+}
 	.project__title {
 		font-size: 6rem;
 		line-height: 73px;
@@ -957,7 +990,33 @@ footer {
 	}
 	/* </Section__footer> */
 }
+@media (max-width: 930px) {
+	/* <Section__project> */
+	.swiper-button-prev,
+	.swiper-button-next{
+		display: none;
+	}
+	.project__contain {
 
+		width: 100%;
+		padding-right: 50px;
+
+	}
+
+	.project__title {
+		font-size: 7vw;
+		line-height: 50px;
+	}
+
+	.project__sub-title {
+		margin-bottom: 70px;
+	}
+
+	.project__btn {
+		margin-bottom: 115px;
+	}
+	/* </Section__project> */
+}
 @media (max-width: 768px) {
 	/* <Container> */
 	/* </Container> */
@@ -980,10 +1039,7 @@ footer {
 	/* </Header> */
 	/* *********************************************************************************** */
 	/* <Section__project> */
-	.swiper-button-prev,
-	.swiper-button-next{
-		display: none;
-	}
+
 	.project__contain {
 		padding: 0px;
 		top: 190px;
@@ -996,6 +1052,8 @@ footer {
 	}
 
 	.project__sub-title {
+		font-size: 2.7vw;
+		padding-right: 50px;
 		margin-bottom: 110px;
 	}
 
@@ -1075,35 +1133,44 @@ footer {
 	.section__project {
 		width: 100%;
 	}
+
+	.swiper-container {
+
+		height: 550px;
+	
+		}
 	.project__contain {
 		display: flex;
 		flex-direction: column;
-		top: 30px;
+		justify-content: space-around;
+		margin: 0;
+		padding: 0;
+		top: 0px;
 		left: 0px;
 		/* width: 90%; */
-		margin: 0 auto;
-		height: 168px;
+		/* margin: 0 auto; */
+		height: 100%;
 	}
 	.project__title {
-		margin-bottom: 20px;
+		/* margin-bottom: 20px; */
 		font-size: 4rem;
 		text-align: center;
-		line-height: 24px;
+		line-height: 50px;
 	}
 
 	.project__sub-title {
 		text-align: center;
 		font-size: 2rem;
 		font-weight: 500;
-		margin-bottom: 35px;
+		margin-bottom: 0;
 		line-height: 15px;
+		padding: 0;
 	}
 
 	.project__btn {
-		font-size: 1.2rem;
-		padding: 11px 14px 14px 14px;
-
-		margin-bottom: 40px;
+		font-size:2.5rem;
+		padding: 11px 14px;
+margin: 0;
 		align-self: center;
 	}
 	/* </Section__project> */
@@ -1237,7 +1304,9 @@ footer {
 }
 @media (max-width: 320px) {
 	/* <Container> */
-
+	.container {
+		width: calc(100% - 30px);
+	}
 	/* </Container> */
 	/* *********************************************************************************** */
 	/* <Header> */
@@ -1250,6 +1319,31 @@ footer {
 	/* </Header> */
 	/* *********************************************************************************** */
 	/* <Section__project> */
+
+	.section__project {
+		
+	}
+
+	.project__contain {
+
+			}
+	.swiper-container {
+		height: 290px;
+		}
+		
+		.project__title {
+			font-size: 2rem;
+			line-height: 24px;
+		}
+		.project__sub-title {
+			font-size: 2rem;
+			line-height: 14px;
+		}
+	.project__btn {
+		font-size: 1.2rem;
+		padding: 11px 14px 14px 14px;
+
+	}
 	/* </Section__project> */
 	/* *********************************************************************************** */
 	/* <Section__description-about> */
