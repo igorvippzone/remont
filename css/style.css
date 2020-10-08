@@ -172,7 +172,9 @@ header{
 
 .nav__link {
 	margin: 10px 0px;
+	
 }
+
 .burger {
 	display: none;
 }
@@ -199,6 +201,8 @@ header{
 	padding: 10px 5px 5px;
 	color: rgb(0, 0, 0);
 	font-size: 1.8rem;
+	/* font-size: 1vw; */
+
 	font-weight: 700;
 	border-bottom: 2px solid rgba(255, 255, 255, 0);
 	transition: border 500ms ease-out 0s;
@@ -253,7 +257,15 @@ header{
 	background-repeat: no-repeat;
 	background-size: cover;
 } */
+.swiper-button-prev,
+.swiper-button-next{
+	color: var(--color__site);
+}
+.swiper-pagination{
+	transform: scale(2);
+	color: tomato;
 
+}
 .swiper-container {
 width: 100%;
 height: 620px;
@@ -285,6 +297,7 @@ left: 78px;
 z-index: 1111;
 
 	width: 55%;
+	cursor: default;
 }
 
 .project__title {
@@ -934,6 +947,7 @@ footer {
 
 	.burger {
 		display: block;
+	
 	}
 	.search-button {
 		margin: 0;
@@ -1312,6 +1326,7 @@ margin: 0;
 	/* <Header> */
 	.burger {
 		order: 1;
+		transform: scale(-1,1);
 	}
 	.search-button {
 		display: none;
